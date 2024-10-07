@@ -2,9 +2,20 @@ import { ChampionDetailData } from "@/types/ChampionDetail";
 import { Metadata } from "next";
 import React from "react";
 import Image from "next/image";
+import { ChampionsList } from "@/types/Champions";
+import { fetchAllChampions } from "@/utils/serverApi";
 
 type Prop = {
   params: { id: string };
+};
+
+export const generateStaticParams = async () => {
+  const { data: allChampions }: { data: ChampionsList } =
+    await fetchAllChampions();
+
+  return Object.keys(allChampions).map((champion) => ({
+    id: champion,
+  }));
 };
 
 export const generateMetadata = ({ params }: Prop): Metadata => {

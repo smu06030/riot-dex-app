@@ -3,16 +3,6 @@ import { ChampionsList } from "@/types/Champions";
 import { fetchAllChampions } from "@/utils/serverApi";
 import { Metadata } from "next";
 
-export const generateStaticParams = async () => {
-  const { data: allChampions }: { data: ChampionsList } =
-    await fetchAllChampions();
-
-  console.log(Object.keys(allChampions))
-  return Object.keys(allChampions).map((champion) => ({
-    id: champion,
-  }));
-};
-
 export const metadata: Metadata = {
   title: "챔피언 목록",
   description: "리그오브레전드 챔피언 목록",
