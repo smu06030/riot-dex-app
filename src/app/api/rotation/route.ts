@@ -1,7 +1,7 @@
 import { ChampionRotationProps } from "@/types/ChampionRotation";
 
-const RIOT_API_KEY = process.env.RIOT_API_KEY;
-const ROTATION_API_URL = process.env.ROTATION_API_URL;
+const RIOT_API_KEY = process.env.NEXT_PUBLIC_RIOT_API_KEY;
+const ROTATION_API_URL = process.env.NEXT_PUBLIC_ROTATION_API_URL;
 
 export const GET = async () => {
   if (!RIOT_API_KEY) return Response.json({ error: "API KEY가 없습니다." });
