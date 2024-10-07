@@ -4,7 +4,7 @@
 
 Next.js와 Typescript, Riot API를 활용한 리그오브레전드 정보 앱 입니다. App Router를 사용해 폴더 구조 기반의 라우팅을 지원합니다.
 
-배포 링크 :  <br />
+배포 링크 :  https://riot-dex-app.vercel.app/<br />
 깃허브 링크 : https://github.com/smu06030/riot-dex-app
 
 ## 💡 주요 기능
