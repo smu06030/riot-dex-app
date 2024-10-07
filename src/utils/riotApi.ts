@@ -3,7 +3,7 @@ import { freeChampionIdsProp } from "@/types/ChampionRotation";
 // 로테이션 챔피언 정보 가져오기
 const getChampionRotation = async (): Promise<freeChampionIdsProp> => {
   try {
-    const res = await fetch("http://localhost:3000/api/rotation");
+    const res = await fetch("https://riot-dex-app.vercel.app/api/rotation");
     const data = await res.json();
     
     return data;
